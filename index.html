@@ -31,11 +31,13 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-6">
-          <form id="ticket-form" action="">
+          <form id="ticket-form" action="" class="d-flex flex-column gy-5">
             <label for=""> Nome Cognome </label>
             <input id="input-name-surname" type="text" value="" />
+
             <label for=""> Kilometri da percorrere </label>
             <input id="input-km" type="number" value="" />
+
             <label for="">Fascia d'età</label>
             <select
               id="input-select"
@@ -47,9 +49,14 @@
 
               <option id="option-select-over65" value="66">Over65</option>
             </select>
-
-            <button id="button-confirm">conferma</button>
-            <button id="button-reset">annulla</button>
+            <div class="text-center mt-3">
+              <button id="button-confirm" class="btn btn-outline-success">
+                conferma
+              </button>
+              <button id="button-reset" class="btn btn-outline-danger">
+                annulla
+              </button>
+            </div>
           </form>
         </div>
         <div class="col-6">
