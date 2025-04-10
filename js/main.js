@@ -17,11 +17,16 @@ formEl.addEventListener("submit", function (event) {
 
   const name = inputNameEl.value;
   const ageStatus = inputSelect.value;
-  const numKm = inputKmEl.value;
+  const numKm = parseInt(inputKmEl.value);
+
+  console.log(numKm);
+
+  if (!name || numKm < 0 || isNaN(numKm)) return;
 
   const ticketPrice = numKm * 0.21;
 
   const discount20 = ticketPrice * 0.2;
+  console.log(discount20);
   const discount40 = ticketPrice * 0.4;
 
   let finalPrice = ticketPrice;
