@@ -33,14 +33,23 @@ formEl.addEventListener("submit", function (event) {
 
   if (ageStatus < 18) {
     finalPrice = ticketPrice - discount20;
+    finalPriceCardEl.innerHTML = `Tariffa per minorenni... Prezzo biglietto ${finalPrice.toFixed(
+      2
+    )}€`;
   } else if (ageStatus > 65) {
     finalPrice = ticketPrice - discount40;
+    finalPriceCardEl.innerHTML = `Tariffa per over 65... Prezzo biglietto ${finalPrice.toFixed(
+      2
+    )}€`;
+  } else {
+    finalPriceCardEl.innerHTML = `Tariffa standard... Prezzo biglietto ${finalPrice.toFixed(
+      2
+    )}€`;
   }
 
   nameCardEl.innerHTML = `${name}`;
 
   KmCardEl.innerHTML = `I km che hai scelto di percorrere ${numKm}Km`;
-  finalPriceCardEl.innerHTML = `Prezzo biglietto ${finalPrice.toFixed(2)}€`;
 
   cardEl.classList.remove("d-none");
 });
