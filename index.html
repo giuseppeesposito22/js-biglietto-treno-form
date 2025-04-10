@@ -23,11 +23,49 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 
     <title>Biglietto Treno</title>
   </head>
   <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-6">
+          <form id="ticket-form" action="">
+            <label for=""> Nome Cognome </label>
+            <input id="input-name-surname" type="text" value="" />
+            <label for=""> Kilometri da percorrere </label>
+            <input id="input-km" type="number" value="" />
+            <label for="">Fascia d'età</label>
+            <select
+              id="input-select"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>Maggiorenne</option>
+              <option id="option-select-underage" value="17">Minorenne</option>
+
+              <option id="option-select-over65" value="66">Over65</option>
+            </select>
+
+            <button id="button-confirm">conferma</button>
+            <button id="button-reset">annulla</button>
+          </form>
+        </div>
+        <div class="col-6">
+          <div class="card d-none" style="width: 18rem">
+            <div class="card-header">Ticket</div>
+            <ul class="list-group list-group-flush">
+              <li id="name-card" class="list-group-item"></li>
+
+              <li id="km-card" class="list-group-item"></li>
+              <li id="final-price-card" class="list-group-item"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
